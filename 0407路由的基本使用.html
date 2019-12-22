@@ -16,6 +16,19 @@
             text-decoration: underline;
             background-color: green;
         }
+
+        /*动画*/
+        .v-enter,
+        .v-leave-to{
+            opacity: 0;
+            transform: translateX(140px);
+        }
+        .v-enter-active,
+        .v-leave-active{
+            transition: all 0.5s ease;
+        }
+
+
     </style>
 </head>
 <body>
@@ -28,7 +41,10 @@
     <router-link to="/login" tag="span">登录</router-link>
     <router-link to="/register">注册</router-link>
 
-	<router-view></router-view>
+    <transition mode="out-in">
+        <router-view></router-view>
+    </transition>
+
 
 </div>
 
