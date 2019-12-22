@@ -54,19 +54,46 @@
 
   </div>
 
+  <template id="headerBox">
+    <h1 class="header">Header头部区域</h1>
+  </template >
+  <template id="leftBox">
+    <h1 class="left">Left侧边栏区域</h1>
+  </template >
+  <template id="mainBox">
+    <h1 class="main">mainBox主体区域</h1>
+  </template >
+
+
   <script>
 
+    // var header = {
+    //   template: '<h1 class="header">Header头部区域</h1>'
+    // };
+    //
+    // var leftBox = {
+    //   template: '<h1 class="left">Left侧边栏区域</h1>'
+    // };
+    //
+    // var mainBox = {
+    //   template: '<h1 class="main">mainBox主体区域</h1>'
+    // };
+
     var header = {
-      template: '<h1 class="header">Header头部区域</h1>'
-    }
+        template: '#headerBox'
+    };
 
     var leftBox = {
-      template: '<h1 class="left">Left侧边栏区域</h1>'
-    }
+        template: '#leftBox'
+    };
 
     var mainBox = {
-      template: '<h1 class="main">mainBox主体区域</h1>'
-    }
+        template: '#mainBox'
+    };
+
+
+
+
 
     // 创建路由对象
     var router = new VueRouter({
