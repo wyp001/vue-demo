@@ -6,6 +6,17 @@
 	<script src="./lib/vue-2.4.0.js"></script>
 	<script src="./lib/vue-router-3.0.1.js"></script>
 
+    <style>
+        /*.router-link-active,*/
+        .myactive {
+            color: red;
+            font-weight: 800;
+            font-style: italic;
+            font-size: 80px;
+            text-decoration: underline;
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
@@ -36,7 +47,8 @@
             { path: '/', redirect: '/login' }, //redirect将/路径重定向到/login路径 这里的 redirect 和 Node 中的 redirect 完全是两码事。
 			{path: "/login",component: login},
 			{path: "/register",component: register},
-		]
+		],
+        linkActiveClass: "myactive"  //linkActiveClass默认是router-link-active
 	});
 
 	var vm = new Vue({
