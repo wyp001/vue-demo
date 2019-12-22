@@ -33,6 +33,7 @@
 
 	var routerObj = new VueRouter({
 		routes:[
+            { path: '/', redirect: '/login' }, //redirect将/路径重定向到/login路径 这里的 redirect 和 Node 中的 redirect 完全是两码事。
 			{path: "/login",component: login},
 			{path: "/register",component: register},
 		]
